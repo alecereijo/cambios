@@ -1,3 +1,6 @@
 En este ejercicio creamos una base de datos mediante php my admin, en ella incluimos las tablas que consideramos necesarias para incluir los datos de nuestros clientes.
 La página cuenta con un sitio inicial donde encontramos dos enlaces que nos llevan a las dos siguientes páginas, En el primer enlace vamos a "login as manager" donde tenemos un menú que nos permite navegar entre los apartados "clientes" y "proyectos" y las tablas correspondientes a los datos.
 En el segundo enlace "loging as employee" encontramos la tabla de "tareas" de nuestros clientes, en todas las tablas podemos acultar su contenido mediante la pestaña incluida a la derecha.
+
+
+En este ejercicio conseguimos que introduciendo usuarios y contraseña, al presionar en los dos enlaces que nos salen en la pagina principal nos lleven al cuadro para poner nuestro usuario y contraseña, si la contraseña y el usuario son correctos nos lleva a la pagina que le tenemos linkeada por ejemplo en clientes tenemos linkiado login.php y de esa manera vemos las tablas de los clientes, en el lado empleado al entrar en employee como lo tenemos linkeado con tasks ya nos lleva a las tablas. Finalmente mediante logout conseguimos volver a la pantalla inicial al pulsar en sair.
