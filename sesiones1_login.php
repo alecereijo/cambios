@@ -20,6 +20,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }else{
         session_start();
         $_SESSION['usuario'] = $_POST['usuario'];
+        header("Location:sesiones1_principal.php");
+    }
+}
+
+function comprobar_usuario2($nombre, $clave)
+{
+    if ($nombre === "manager" and $clave === "1234") {
+        $usu['nombre'] = "usuario";
+        $usu['rol'] = 0;
+        return $usu;
+    } elseif ($nombre === "admin" and $clave === "1234") {
+        $usu['nombre'] = "admin";
+        $usu['rol'] = 1;
+        return $usu;
+    } else return FALSE;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usu = comprobar_usuario2($_POST['usuario'], $_POST['clave']);
+    if ($usu == FALSE) {
+        $err = TRUE;
+        $usuario = $_POST['usuario'];
+    }else{
+        session_start();
+        $_SESSION['usuario'] = $_POST['usuario'];
         header("Location:manager/clients.php");
     }
 }
@@ -44,3 +69,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
     </body>
 </html>
+
